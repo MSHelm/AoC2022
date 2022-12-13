@@ -5,7 +5,7 @@ import (
 	"os"
 )
 
-func readLines() []string {
+func ReadLines() []string {
 	lines := []string{}
 
 	f, err := os.Open("input.txt")
