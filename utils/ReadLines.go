@@ -9,7 +9,10 @@ func ReadLines() []string {
 	lines := []string{}
 
 	f, err := os.Open("input.txt")
-	check(err)
+	if err != nil {
+		panic(err)
+	}
+
 	defer f.Close()
 
 	scanner := bufio.NewScanner(f)
